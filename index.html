@@ -14,11 +14,11 @@
         }
 
         :root {
-            --primary: #2C3E50;
-            --secondary: #E74C3C;
-            --accent: #F39C12;
-            --light: #ECF0F1;
-            --dark: #1a252f;
+            --primary: #222222; /* Dark grey/black */
+            --secondary: #B8860B; /* Dark gold */
+            --accent: #D4AF37; /* Lighter gold */
+            --light: #f9f9f9;
+            --dark: #1a1a1a;
         }
 
         body {
@@ -54,7 +54,7 @@
         .orb-1 {
             width: 500px;
             height: 500px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #333333, #111111);
             top: -10%;
             left: -10%;
             animation-delay: 0s;
@@ -63,7 +63,7 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: linear-gradient(45deg, #f093fb, #f5576c);
+            background: linear-gradient(45deg, var(--secondary), #444444);
             bottom: -10%;
             right: -10%;
             animation-delay: 7s;
@@ -72,7 +72,7 @@
         .orb-3 {
             width: 350px;
             height: 350px;
-            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            background: linear-gradient(45deg, #555555, #222222);
             top: 50%;
             left: 50%;
             animation-delay: 14s;
@@ -98,12 +98,12 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(at 40% 20%, hsla(260, 70%, 60%, 0.3) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, hsla(290, 70%, 60%, 0.3) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, hsla(320, 70%, 60%, 0.3) 0px, transparent 50%),
-                radial-gradient(at 80% 50%, hsla(240, 70%, 60%, 0.3) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, hsla(270, 70%, 60%, 0.3) 0px, transparent 50%),
-                radial-gradient(at 80% 100%, hsla(310, 70%, 60%, 0.3) 0px, transparent 50%);
+                radial-gradient(at 40% 20%, hsla(0, 0%, 20%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(45, 100%, 36%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(0, 0%, 10%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(0, 0%, 20%, 0.3) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(45, 100%, 36%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, hsla(0, 0%, 10%, 0.3) 0px, transparent 50%);
             animation: meshMove 15s ease infinite;
             opacity: 0.8;
         }
@@ -161,7 +161,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -189,7 +189,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
             transition: width 0.3s ease;
         }
 
@@ -198,13 +198,13 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             color: white !important;
             padding: 12px 30px;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -226,7 +226,7 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
         }
 
         .cta-button::after {
@@ -256,7 +256,7 @@
             position: relative;
             overflow: hidden;
             padding: 0 5%;
-            background: #0f0c29;
+            background: #000;
         }
 
         .hero-gradient {
@@ -265,7 +265,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, #333 100%);
             opacity: 0.9;
         }
 
@@ -307,7 +307,7 @@
         }
 
         .hero-text .highlight {
-            background: linear-gradient(45deg, #ffd89b, #19547b);
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -413,7 +413,7 @@
 
         /* Stats Section with Gradient */
         .stats {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             color: white;
             padding: 3rem 5%;
             margin-top: -50px;
@@ -457,14 +457,14 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, #f093fb, #f5576c);
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
             border-radius: 2px;
         }
 
         .stat-number {
             font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -491,7 +491,7 @@
             right: 0;
             width: 50%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.05) 100%);
             border-radius: 0 0 0 50%;
             z-index: 0;
         }
@@ -524,7 +524,7 @@
             left: -20px;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary), var(--dark));
             border-radius: 20px;
             z-index: -1;
             opacity: 0.3;
@@ -546,7 +546,7 @@
             left: 0;
             width: 60%;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
             border-radius: 2px;
         }
 
@@ -569,27 +569,27 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
-            background: rgba(102, 126, 234, 0.05);
+            background: rgba(0, 0, 0, 0.03);
             border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .feature-item:hover {
-            background: rgba(102, 126, 234, 0.1);
+            background: rgba(0, 0, 0, 0.06);
             transform: translateX(10px);
         }
 
         .feature-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 1.3rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Hands-On Experience Section with Animated Background */
@@ -606,7 +606,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #333 50%, var(--dark) 100%);
             animation: gradientShift 15s ease infinite;
             background-size: 200% 200%;
         }
@@ -664,7 +664,7 @@
         .benefit-item:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .benefit-icon {
@@ -681,7 +681,7 @@
 
         .benefit-icon i {
             font-size: 1.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -723,7 +723,7 @@
         }
 
         .hands-on-badge h3 {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary), var(--dark));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -741,7 +741,7 @@
         /* Courses Section */
         .courses {
             padding: 8rem 5%;
-            background: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(180deg, var(--light) 0%, #eeeeee 100%);
             position: relative;
         }
 
@@ -786,7 +786,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 0;
@@ -823,13 +823,13 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: linear-gradient(135deg, #f093fb, #f5576c);
-            color: white;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: var(--primary);
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
         }
 
         .course-content {
@@ -870,7 +870,7 @@
         /* Testimonials with Gradient Background */
         .testimonials {
             padding: 8rem 5%;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             color: white;
             position: relative;
             overflow: hidden;
@@ -883,8 +883,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(240, 147, 251, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.2) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
         }
 
         .testimonials-container {
@@ -954,13 +954,14 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #f093fb, #f5576c);
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             font-weight: 700;
-            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
         .author-info h4 {
@@ -992,7 +993,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%),
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.95) 0%, rgba(34, 34, 34, 0.95) 100%),
                         url('https://i.imgur.com/hScyScQ.jpeg');
             background-size: cover;
             background-position: center;
@@ -1005,8 +1006,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 30% 50%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 50%, rgba(102, 126, 234, 0.3) 0%, transparent 50%);
+            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(184, 134, 11, 0.15) 0%, transparent 50%);
             animation: pulse 10s ease infinite;
         }
 
@@ -1065,7 +1066,7 @@
         .contact-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -1073,7 +1074,7 @@
             color: white;
             font-size: 1.5rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .contact-details h3 {
@@ -1087,18 +1088,18 @@
         }
 
         .contact-details a {
-            color: #667eea;
+            color: var(--secondary);
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .contact-details a:hover {
-            color: #764ba2;
+            color: var(--accent);
             text-decoration: underline;
         }
 
         .contact-form {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.05) 100%);
             padding: 3rem;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
@@ -1132,8 +1133,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
         }
 
         .form-group textarea {
@@ -1144,7 +1145,7 @@
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
             color: white;
             border: none;
             border-radius: 10px;
@@ -1152,7 +1153,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -1174,7 +1175,7 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
         }
 
         .map-container {
@@ -1192,7 +1193,7 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, #0a0a0a 100%);
             color: white;
             padding: 4rem 5% 2rem;
             position: relative;
@@ -1205,8 +1206,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 50%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(184, 134, 11, 0.05) 0%, transparent 50%);
         }
 
         .footer-content {
@@ -1250,9 +1251,10 @@
         }
 
         .social-links a:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
         .footer-links h3 {
@@ -1465,7 +1467,7 @@
             <div class="hero-image">
                 <div class="floating-card">
                     <img src="https://i.imgur.com/qom8u3w.jpeg" alt="Students Learning at Kema Skills Hub">
-                    <h3>Join 3000+ Successful Graduates</h3>
+                    <h3>Join 200+ Students</h3>
                     <p>Building careers through quality vocational training</p>
                 </div>
             </div>
@@ -1476,8 +1478,8 @@
     <section class="stats">
         <div class="stats-container">
             <div class="stat-item scroll-animate">
-                <div class="stat-number">3000+</div>
-                <div class="stat-label">Graduates</div>
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Students</div>
             </div>
             <div class="stat-item scroll-animate">
                 <div class="stat-number">25+</div>
@@ -1488,8 +1490,8 @@
                 <div class="stat-label">Specialized Programs</div>
             </div>
             <div class="stat-item scroll-animate">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Success Rate</div>
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Operating</div>
             </div>
         </div>
     </section>
@@ -1506,6 +1508,11 @@
                 <p>We specialize in four core areas: Fashion Design, Event Decorating, Makeup & Veiling, and Professional Baking. Our comprehensive training programs combine traditional craftsmanship with modern techniques to ensure our graduates stand out in their chosen fields.</p>
                 <p>With state-of-the-art facilities, experienced instructors, and a commitment to excellence, we provide hands-on training that prepares you for immediate employment or entrepreneurship in Uganda's growing creative and hospitality industries.</p>
                 
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary);">Vision</h3>
+                <p>To establish a global reputation for success in a rapid changing industry and make a positive impact on society.</p>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary);">Mission</h3>
+                <p>To cultivate a new generation for job creators who can drive innovation sustainability and creativity in the industry.</p>
+
                 <div class="features-grid">
                     <div class="feature-item">
                         <div class="feature-icon"><i class="fas fa-certificate"></i></div>
@@ -1622,7 +1629,7 @@
                 <!-- Fashion Design Course -->
                 <div class="course-card scroll-animate">
                     <div class="course-image">
-                        <img src="https://images.pexels.com/photos/3738388/pexels-photo-3738388.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fashion Design Course" onerror="this.src='https://via.placeholder.com/800x600/667eea/ffffff?text=Fashion+Design'">
+                        <img src="https://media.istockphoto.com/id/1364618551/photo/latino-spain-salewoman-in-storage-update-cotton-and-lace-fabric-showroom.jpg?s=612x612&w=0&k=20&c=bWvjIPWMbmUk-l2O2wwYx5YTDu8DU5jS8Gq6OXG5XnQ=" alt="Fashion Design Course" onerror="this.src='https://placehold.co/800x600/667eea/ffffff?text=Fashion+Design'">
                         <span class="course-badge">Popular</span>
                     </div>
                     <div class="course-content">
@@ -1638,7 +1645,7 @@
                 <!-- Decorating Course -->
                 <div class="course-card scroll-animate">
                     <div class="course-image">
-                        <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Event Decorating Course" onerror="this.src='https://via.placeholder.com/800x600/764ba2/ffffff?text=Event+Decorating'">
+                        <img src="https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Event Decorating Course" onerror="this.src='https://placehold.co/800x600/764ba2/ffffff?text=Event+Decorating'">
                         <span class="course-badge">Trending</span>
                     </div>
                     <div class="course-content">
@@ -1654,7 +1661,7 @@
                 <!-- Makeup & Veiling Course -->
                 <div class="course-card scroll-animate">
                     <div class="course-image">
-                        <img src="https://images.pexels.com/photos/457701/pexels-photo-457701.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Makeup and Veiling Course" onerror="this.src='https://via.placeholder.com/800x600/f093fb/ffffff?text=Makeup+%26+Veiling'">
+                        <img src="https://images.pexels.com/photos/4910937/pexels-photo-4910937.jpeg" alt="Makeup and Veiling Course" onerror="this.src='https://placehold.co/800x600/f093fb/ffffff?text=Makeup+%26+Veiling'">
                         <span class="course-badge">Hot</span>
                     </div>
                     <div class="course-content">
@@ -1670,7 +1677,7 @@
                 <!-- Baking Course -->
                 <div class="course-card scroll-animate">
                     <div class="course-image">
-                        <img src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional Baking Course" onerror="this.src='https://via.placeholder.com/800x600/F39C12/ffffff?text=Professional+Baking'">
+                        <img src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional Baking Course" onerror="this.src='https://placehold.co/800x600/F39C12/ffffff?text=Professional+Baking'">
                         <span class="course-badge">Featured</span>
                     </div>
                     <div class="course-content">
@@ -1690,7 +1697,7 @@
     <section class="testimonials" id="testimonials">
         <div class="testimonials-container">
             <div class="section-header scroll-animate">
-                <p class="section-subtitle" style="color: #ffd700;">Success Stories</p>
+                <p class="section-subtitle" style="color: var(--accent);">Success Stories</p>
                 <h2 class="section-title" style="color: white;">What Our Students Say</h2>
                 <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem; opacity: 0.9;">
                     Hear from our successful graduates who are thriving in their careers
@@ -1708,9 +1715,9 @@
                     </div>
                     <p class="testimonial-text">"Kema Skills Hub changed my life! The fashion design course was comprehensive and practical. I now run my own tailoring business in Kampala and have more clients than I can handle."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">AN</div>
+                        <div class="author-avatar">DU</div>
                         <div class="author-info">
-                            <h4>Agnes Namukasa</h4>
+                            <h4>Drape Ug</h4>
                             <p>Fashion Designer</p>
                         </div>
                     </div>
@@ -1726,9 +1733,9 @@
                     </div>
                     <p class="testimonial-text">"The makeup and veiling course exceeded my expectations! The instructors are amazing and I learned techniques I never thought possible. I'm now the go-to makeup artist for weddings in my area."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
+                        <div class="author-avatar">FU</div>
                         <div class="author-info">
-                            <h4>Sarah Mukisa</h4>
+                            <h4>Face drip Ug</h4>
                             <p>Professional Makeup Artist</p>
                         </div>
                     </div>
@@ -1744,10 +1751,28 @@
                     </div>
                     <p class="testimonial-text">"Best decision I ever made! The baking program taught me everything from basics to advanced cake decoration. I opened my bakery 3 months after graduating and business is booming!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">DK</div>
+                        <div class="author-avatar">TC</div>
                         <div class="author-info">
-                            <h4>David Kato</h4>
+                            <h4>Tasneem's cake</h4>
                             <p>Bakery Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The decoration course was fantastic! I learned so much about design and execution. Now, my company 'JJ and more decorations' is one of the most sought-after for events."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JJ</div>
+                        <div class="author-info">
+                            <h4>JJ and more decorations</h4>
+                            <p>Event Decorator</p>
                         </div>
                     </div>
                 </div>
@@ -1824,7 +1849,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Working Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br><small style="color: #E74C3C;">Sunday: Closed</small></p>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br><small style="color: #888;">Sunday: Closed</small></p>
                     </div>
                 </div>
 
@@ -1918,7 +1943,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024 Kema Skills Hub Uganda. All Rights Reserved. | Ruby Haven Lane, Mawanda Rd, Kampala | Designed with <i class="fas fa-heart" style="color: #E74C3C;"></i> for Excellence</p>
+            <p>&copy; 2024 Kema Skills Hub Uganda. All Rights Reserved. | Ruby Haven Lane, Mawanda Rd, Kampala | Designed with <i class="fas fa-heart" style="color: var(--secondary);"></i> for Excellence</p>
         </div>
     </footer>
 
@@ -1964,24 +1989,16 @@
         });
 
         // Counter Animation
-        const animateCounter = (element, target) => {
+        const animateCounter = (element, target, isPlus = true) => {
             let current = 0;
             const increment = target / 100;
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
-                    if (target === 4) {
-                        element.textContent = target;
-                    } else {
-                        element.textContent = target + '+';
-                    }
+                    element.textContent = isPlus ? target + '+' : target;
                     clearInterval(timer);
                 } else {
-                    if (target === 4) {
-                        element.textContent = Math.floor(current);
-                    } else {
-                        element.textContent = Math.floor(current) + '+';
-                    }
+                    element.textContent = Math.floor(current) + (isPlus ? '+' : '');
                 }
             }, 20);
         };
@@ -1991,15 +2008,13 @@
             const stats = document.querySelector('.stats');
             if (stats && elementInView(stats, 1.5) && !counterAnimated) {
                 const statNumbers = document.querySelectorAll('.stat-number');
+                const targets = [200, 25, 4, 3];
+                const isPlus = [true, true, false, true];
+
                 statNumbers.forEach((stat, index) => {
-                    const targets = [3000, 25, 4, 95];
                     setTimeout(() => {
-                        if (targets[index] === 4) {
-                            stat.textContent = '0';
-                        } else {
-                            stat.textContent = '0+';
-                        }
-                        animateCounter(stat, targets[index]);
+                        stat.textContent = '0+';
+                        animateCounter(stat, targets[index], isPlus[index]);
                     }, index * 100);
                 });
                 counterAnimated = true;
@@ -2014,7 +2029,38 @@
             const course = formData.get('course');
             const name = formData.get('name');
             
-            alert(`Thank you ${name} for your interest in Kema Skills Hub Uganda! We will contact you soon regarding the ${course} course.`);
+            // Create a custom modal instead of alert
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.background = 'rgba(0,0,0,0.5)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.zIndex = '9999';
+
+            const modalContent = document.createElement('div');
+            modalContent.style.background = 'white';
+            modalContent.style.padding = '2rem';
+            modalContent.style.borderRadius = '10px';
+            modalContent.style.textAlign = 'center';
+            modalContent.style.fontFamily = "'Poppins', sans-serif";
+            modalContent.style.color = '#333';
+
+            modalContent.innerHTML = `<h3 style="margin-bottom: 1rem; color: var(--primary);">Thank You, ${name}!</h3>
+                                      <p style="margin-bottom: 1.5rem; color: #555;">We've received your interest in the ${course} course.<br>We will contact you soon.</p>
+                                      <button id="closeModal" style="padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>`;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+
+            document.getElementById('closeModal').addEventListener('click', () => {
+                document.body.removeChild(modal);
+            });
+            
             form.reset();
         });
 
